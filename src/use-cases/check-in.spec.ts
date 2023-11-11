@@ -21,8 +21,8 @@ describe('Check-in Use Case', () => {
       title: 'Javascript Gym',
       description: '',
       phone: '123456789',
-      latitude: -23.6814336,
-      longitude: -46.6649088,
+      latitude: -23.6262141,
+      longitude: -46.6960077,
     })
 
     vi.useFakeTimers()
@@ -36,8 +36,8 @@ describe('Check-in Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: -23.6814336,
-      userLongitude: -46.6649088,
+      userLatitude: -23.6262141,
+      userLongitude: -46.6960077,
     })
 
     expect(checkIn.id).toEqual(expect.any(String))
@@ -49,16 +49,16 @@ describe('Check-in Use Case', () => {
     await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: -23.6814336,
-      userLongitude: -46.6649088,
+      userLatitude: -23.6262141,
+      userLongitude: -46.6960077,
     })
 
     await expect(() =>
       sut.execute({
         gymId: 'gym-01',
         userId: 'user-01',
-        userLatitude: -23.6814336,
-        userLongitude: -46.6649088,
+        userLatitude: -23.6262141,
+        userLongitude: -46.6960077,
       }),
     ).rejects.toBeInstanceOf(MaxNumberOfCheckInsError)
   })
@@ -69,8 +69,8 @@ describe('Check-in Use Case', () => {
     await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: -23.6814336,
-      userLongitude: -46.6649088,
+      userLatitude: -23.6262141,
+      userLongitude: -46.6960077,
     })
 
     vi.setSystemTime(new Date(2022, 0, 21, 8, 0, 0))
@@ -78,8 +78,8 @@ describe('Check-in Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: -23.6814336,
-      userLongitude: -46.6649088,
+      userLatitude: -23.6262141,
+      userLongitude: -46.6960077,
     })
 
     expect(checkIn.id).toEqual(expect.any(String))
@@ -99,8 +99,8 @@ describe('Check-in Use Case', () => {
       sut.execute({
         gymId: 'gym-02',
         userId: 'user-01',
-        userLatitude: -23.6814336,
-        userLongitude: -46.6649088,
+        userLatitude: -23.6262141,
+        userLongitude: -46.6960077,
       }),
     ).rejects.toBeInstanceOf(MaxDistanceError)
   })
