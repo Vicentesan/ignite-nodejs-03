@@ -21,8 +21,8 @@ GymPass style app
   [x] - O usuario não pode fazer mais de um check-in no mesmo dia
   [x] - O usuario não pode fazer check-in se não estiver perto (100m) da academia 
   [x] - O check-in so pode ser validade até 20 minutos apos criado
-  [ ] - O check-in so pode ser validado por Administradores
-  [ ] - A academia so pode ser cadastrada por Administradores
+  [x] - O check-in so pode ser validado por Administradores
+  [x] - A academia so pode ser cadastrada por Administradores
   
 ## RNFs (Requisitos não funcionais)
 
