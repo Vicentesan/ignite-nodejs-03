@@ -14,7 +14,7 @@ describe('Validate Check-in (e2e)', async () => {
   })
 
   it('should be able to validate a check-in', async () => {
-    const { token } = await CreateAndAuthUser(app)
+    const { token } = await CreateAndAuthUser(app, true)
 
     const user = await db.user.findFirstOrThrow()
 

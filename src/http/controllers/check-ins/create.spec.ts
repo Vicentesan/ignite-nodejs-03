@@ -14,7 +14,7 @@ describe('Create Check-in (e2e)', async () => {
   })
 
   it('should be able to create a check-in', async () => {
-    const { token } = await CreateAndAuthUser(app)
+    const { token } = await CreateAndAuthUser(app, true)
 
     const createdGym = await db.gym.create({
       data: {
