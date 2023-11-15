@@ -13,9 +13,9 @@ jobs:
       ports:
         - 5432:5432
       env:
-        - POSTGRESQL_USERNAME=testing
-        - POSTGRESQL_PASSWORD=testing
-        - POSTGRESQL_DATABASE=testing
+        POSTGRESQL_USERNAME: testing
+        POSTGRESQL_PASSWORD: testing
+        POSTGRESQL_DATABASE: testing
 
     steps: 
       - uses: actions/checkout@v4
