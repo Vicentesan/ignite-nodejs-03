@@ -29,7 +29,7 @@
     "@vitest/ui": "0.34.6",
     "eslint": "8.53.0",
     "prisma": "5.5.2",
-    "supertest": "6.3.3",
+    "supertest": "7.0.0",
     "tsup": "7.2.0",
     "tsx": "4.0.0",
     "typescript": "5.2.2",
